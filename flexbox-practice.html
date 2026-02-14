@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flexbox макет</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #4CAF50;
+  }
+  .logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+  }
+  nav {
+    display: flex;
+    gap: 15px;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  section.about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+  }
+  .column {
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+  @media (max-width: 767px) {
+    .about {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Логотип</div>
+  <nav>
+    <a href="#">Главная</a>
+    <a href="#">О нас</a>
+    <a href="#">Контакты</a>
+  </nav>
+</header>
+
+<section class="about">
+  <div class="column">
+    <div class="icon">🔧</div>
+    <h3>Заголовок 1</h3>
+    <p>Описание 1</p>
+  </div>
+  <div class="column">
+    <div class="icon">💡</div>
+    <h3>Заголовок 2</h3>
+    <p>Описание 2</p>
+  </div>
+  <div class="column">
+    <div class="icon">🌐</div>
+    <h3>Заголовок 3</h3>
+    <p>Описание 3</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Шувалова Алина, ИСП-231. Все права защищены.</p>
+</footer>
+
+</body>
+</html>
